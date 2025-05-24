@@ -5,7 +5,7 @@ export default function Herosection() {
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-            Nikmati Keseruan <br /> di Azguh Waterpark!
+            Nikmati Keseruan <br /> di Azguh Waterpark Pekanbaru
           </h1>
           <p className="mb-6 text-lg">
             Temukan berbagai wahana air seru untuk semua umur. Pesan tiketmu sekarang dan rasakan petualangan tak terlupakan!
