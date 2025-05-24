@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Dewi Lestari",
+    "rating": 5,
+    "comment": "Anak-anak suka banget! Wahananya aman dan menyenangkan.",
+    "date": "2025-04-15"
+  },
+  {
+    "id": 2,
+    "name": "Rizki Putra",
+    "rating": 4,
+    "comment": "Fasilitas lengkap, cuma parkiran agak penuh waktu weekend.",
+    "date": "2025-04-10"
+  },
+  {
+    "id": 3,
+    "name": "Anisa Maharani",
+    "rating": 5,
+    "comment": "Kolam ombaknya seru, stafnya ramah-ramah.",
+    "date": "2025-03-30"
+  },
+  {
+    "id": 4,
+    "name": "Fajar Nugroho",
+    "rating": 3,
+    "comment": "Harga makanan agak mahal tapi overall bagus.",
+    "date": "2025-03-25"
+  },
+  {
+    "id": 5,
+    "name": "Lina Sari",
+    "rating": 4,
+    "comment": "Area bersih, anak nyaman bermain. Akan balik lagi!",
+    "date": "2025-04-12"
+  },
+  {
+    "id": 6,
+    "name": "Bayu Aditya",
+    "rating": 5,
+    "comment": "Wahana Spiral Splash keren banget!",
+    "date": "2025-04-18"
+  },
+  {
+    "id": 7,
+    "name": "Maya Febrina",
+    "rating": 4,
+    "comment": "Reservasi online sangat mudah. Proses masuk cepat!",
+    "date": "2025-04-16"
+  },
+  {
+    "id": 8,
+    "name": "Tegar Ramadhan",
+    "rating": 2,
+    "comment": "Datang pas hujan deras, jadi nggak bisa banyak main.",
+    "date": "2025-04-07"
+  },
+  {
+    "id": 9,
+    "name": "Nadia Utami",
+    "rating": 5,
+    "comment": "Tempat rekreasi keluarga terbaik di Siak!",
+    "date": "2025-03-29"
+  },
+  {
+    "id": 10,
+    "name": "Rendi Alfarizi",
+    "rating": 3,
+    "comment": "Perlu penambahan gazebo atau tempat berteduh.",
+    "date": "2025-04-03"
+  }
+]

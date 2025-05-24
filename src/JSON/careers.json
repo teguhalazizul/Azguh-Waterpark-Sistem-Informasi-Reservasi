@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "Lifeguard",
+    "location": "Siak, Riau",
+    "type": "Full-Time",
+    "description": "Menjaga keselamatan pengunjung di area kolam renang.",
+    "requirements": [
+      "SMA/sederajat",
+      "Sertifikasi lifeguard",
+      "Mampu berenang dengan baik"
+    ],
+    "posted_at": "2025-04-01"
+  },
+  {
+    "id": 2,
+    "title": "Customer Service",
+    "location": "Siak, Riau",
+    "type": "Part-Time",
+    "description": "Melayani pertanyaan pengunjung di area loket.",
+    "requirements": [
+      "SMA/sederajat",
+      "Komunikatif",
+      "Berpenampilan rapi"
+    ],
+    "posted_at": "2025-03-25"
+  },
+  {
+    "id": 3,
+    "title": "Marketing Digital",
+    "location": "Remote / Siak",
+    "type": "Full-Time",
+    "description": "Menangani promosi dan sosial media Azguh.",
+    "requirements": [
+      "Pengalaman sosial media",
+      "Menguasai Canva atau Photoshop",
+      "Kreatif"
+    ],
+    "posted_at": "2025-04-12"
+  },
+  {
+    "id": 4,
+    "title": "Security",
+    "location": "Siak, Riau",
+    "type": "Full-Time",
+    "description": "Menjaga keamanan seluruh area Azguh Waterpark.",
+    "requirements": [
+      "Pengalaman kerja sebagai satpam",
+      "Tegas dan tanggap"
+    ],
+    "posted_at": "2025-04-05"
+  },
+  {
+    "id": 5,
+    "title": "Petugas Kebersihan",
+    "location": "Siak, Riau",
+    "type": "Part-Time",
+    "description": "Menjaga kebersihan area umum.",
+    "requirements": [
+      "Rajin",
+      "Bisa kerja tim",
+      "Cekatan"
+    ],
+    "posted_at": "2025-04-10"
+  },
+  {
+    "id": 6,
+    "title": "Animator Event Anak",
+    "location": "Siak, Riau",
+    "type": "Freelance",
+    "description": "Menghibur anak-anak di event akhir pekan.",
+    "requirements": [
+      "Suka anak-anak",
+      "Kreatif",
+      "Bisa menyanyi / storytelling"
+    ],
+    "posted_at": "2025-04-13"
+  },
+  {
+    "id": 7,
+    "title": "Penjaga Loket",
+    "location": "Siak, Riau",
+    "type": "Shift",
+    "description": "Mengelola transaksi pembelian tiket.",
+    "requirements": [
+      "Teliti",
+      "Ramah",
+      "Pengalaman kasir"
+    ],
+    "posted_at": "2025-04-02"
+  },
+  {
+    "id": 8,
+    "title": "Kasir Food Court",
+    "location": "Siak, Riau",
+    "type": "Full-Time",
+    "description": "Mengelola kasir di area makanan.",
+    "requirements": [
+      "Pengalaman kasir",
+      "Cekatan",
+      "Jujur"
+    ],
+    "posted_at": "2025-03-27"
+  },
+  {
+    "id": 9,
+    "title": "Teknisi Kolam",
+    "location": "Siak, Riau",
+    "type": "Full-Time",
+    "description": "Mengontrol kualitas air dan peralatan pompa.",
+    "requirements": [
+      "Mengerti sistem pompa",
+      "Suka bekerja di lapangan"
+    ],
+    "posted_at": "2025-04-06"
+  },
+  {
+    "id": 10,
+    "title": "Fotografer Wisata",
+    "location": "Siak, Riau",
+    "type": "Freelance",
+    "description": "Mengambil foto pengunjung di spot terbaik.",
+    "requirements": [
+      "Punya kamera sendiri",
+      "Suka interaksi dengan orang",
+      "Kreatif"
+    ],
+    "posted_at": "2025-04-08"
+  }
+]

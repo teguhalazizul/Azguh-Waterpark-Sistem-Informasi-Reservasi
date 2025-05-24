@@ -1,0 +1,413 @@
+[
+  {
+    "id_tiket": "T001",
+    "nama_kolam": "Kolam Ceria",
+    "harga": 25000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://renangloka.com/wp-content/uploads/2022/09/kolam-renang-ceria-1.jpeg",
+    "lokasi": {
+      "alamat": "Jl. Melati No.1, Pekanbaru",
+      "kota": "Pekanbaru",
+      "kode_pos": "28292"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Senin - Minggu",
+      "jam": "08:00 - 17:00"
+    }
+  },
+  {
+    "id_tiket": "T002",
+    "nama_kolam": "Kolam Bahagia",
+    "harga": 30000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://renangloka.com/wp-content/uploads/2022/09/kolam-renang-ceria-1.jpeg",
+    "lokasi": {
+      "alamat": "Jl. Merdeka No.5, Siak",
+      "kota": "Siak",
+      "kode_pos": "28671"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": false,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Sabtu & Minggu",
+      "jam": "09:00 - 18:00"
+    }
+  },
+  {
+    "id_tiket": "T003",
+    "nama_kolam": "Tirta Jaya",
+    "harga": 35000,
+    "jenis_tiket": "VIP",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgwmvcNpVQrgjKXPXWDjpgL6x593QH-532rA&s",
+    "lokasi": {
+      "alamat": "Jl. Garuda No.7, Dumai",
+      "kota": "Dumai",
+      "kode_pos": "28826"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": false
+    },
+    "jadwal_buka": {
+      "hari": "Senin - Jumat",
+      "jam": "10:00 - 16:00"
+    }
+  },
+  {
+    "id_tiket": "T004",
+    "nama_kolam": "Aqua Park Mini",
+    "harga": 40000,
+    "jenis_tiket": "VIP",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Raya Timur No.11, Bengkalis",
+      "kota": "Bengkalis",
+      "kode_pos": "28711"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Setiap Hari",
+      "jam": "07:00 - 19:00"
+    }
+  },
+  {
+    "id_tiket": "T005",
+    "nama_kolam": "Kolam Pelangi",
+    "harga": 20000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Pelita No.3, Kampar",
+      "kota": "Kampar",
+      "kode_pos": "28461"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": false,
+      "penyewaan_ban": false
+    },
+    "jadwal_buka": {
+      "hari": "Sabtu & Minggu",
+      "jam": "08:00 - 12:00"
+    }
+  },
+  {
+    "id_tiket": "T006",
+    "nama_kolam": "Kolam Sejahtera",
+    "harga": 30000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Kartini No.22, Siak",
+      "kota": "Siak",
+      "kode_pos": "28671"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Jumat - Minggu",
+      "jam": "09:00 - 17:00"
+    }
+  },
+  {
+    "id_tiket": "T007",
+    "nama_kolam": "Waterboom Siak",
+    "harga": 50000,
+    "jenis_tiket": "VIP",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Sultan Syarif No.19, Siak",
+      "kota": "Siak",
+      "kode_pos": "28671"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Setiap Hari",
+      "jam": "08:00 - 18:00"
+    }
+  },
+  {
+    "id_tiket": "T008",
+    "nama_kolam": "Kolam Mawar",
+    "harga": 18000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Mawar Indah No.10, Pekanbaru",
+      "kota": "Pekanbaru",
+      "kode_pos": "28292"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": false,
+      "penyewaan_ban": false
+    },
+    "jadwal_buka": {
+      "hari": "Senin - Jumat",
+      "jam": "07:00 - 12:00"
+    }
+  },
+  {
+    "id_tiket": "T009",
+    "nama_kolam": "Kolam Zamrud",
+    "harga": 22000,
+    "jenis_tiket": "Reguler",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Zamrud No.2, Siak",
+      "kota": "Siak",
+      "kode_pos": "28671"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": false
+    },
+    "jadwal_buka": {
+      "hari": "Sabtu & Minggu",
+      "jam": "09:00 - 13:00"
+    }
+  },
+  {
+    "id_tiket": "T010",
+    "nama_kolam": "Oasis Riau",
+    "harga": 55000,
+    "jenis_tiket": "VIP",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s",
+    "lokasi": {
+      "alamat": "Jl. Lintas Timur No.45, Pekanbaru",
+      "kota": "Pekanbaru",
+      "kode_pos": "28283"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "kantin": true,
+      "penyewaan_ban": true
+    },
+    "jadwal_buka": {
+      "hari": "Setiap Hari",
+      "jam": "08:00 - 20:00"
+    }
+  },
+
+  {
+    "id_tiket": 21,
+    "nama_kolam": "WaterSplash Garden",
+    "jenis_tiket": "Reguler",
+    "harga": 27000,
+    "lokasi": {
+      "alamat": "Jl. Air Mancur No.45",
+      "kota": "Semarang"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": true,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Senin-Minggu",
+      "jam": "08:00 - 17:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 22,
+    "nama_kolam": "Sunshine Pool Park",
+    "jenis_tiket": "VIP",
+    "harga": 55000,
+    "lokasi": {
+      "alamat": "Jl. Pelangi No.88",
+      "kota": "Jakarta"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": false,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Sabtu-Minggu",
+      "jam": "09:00 - 18:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 23,
+    "nama_kolam": "Banyu Tirta Swimming Club",
+    "jenis_tiket": "Reguler",
+    "harga": 22000,
+    "lokasi": {
+      "alamat": "Jl. Sawah Baru No.5",
+      "kota": "Surabaya"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": false,
+      "kantin": false
+    },
+    "jadwal_buka": {
+      "hari": "Senin-Jumat",
+      "jam": "07:00 - 15:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 24,
+    "nama_kolam": "Kolam Ceria",
+    "jenis_tiket": "Reguler",
+    "harga": 18000,
+    "lokasi": {
+      "alamat": "Jl. Gembira No.12",
+      "kota": "Yogyakarta"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": true,
+      "kantin": false
+    },
+    "jadwal_buka": {
+      "hari": "Setiap Hari",
+      "jam": "06:00 - 16:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 25,
+    "nama_kolam": "Oceanic Kids Pool",
+    "jenis_tiket": "VIP",
+    "harga": 60000,
+    "lokasi": {
+      "alamat": "Jl. Samudra Raya No.9",
+      "kota": "Denpasar"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": true,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Senin-Sabtu",
+      "jam": "08:30 - 17:30"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 26,
+    "nama_kolam": "Tirta Indah",
+    "jenis_tiket": "Reguler",
+    "harga": 25000,
+    "lokasi": {
+      "alamat": "Jl. Mata Air No.2",
+      "kota": "Palembang"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": false,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Senin-Minggu",
+      "jam": "07:00 - 16:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 27,
+    "nama_kolam": "Blue Oasis Waterpark",
+    "jenis_tiket": "VIP",
+    "harga": 70000,
+    "lokasi": {
+      "alamat": "Jl. Oasis No.1",
+      "kota": "Bandung"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": true,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Jumat-Minggu",
+      "jam": "09:00 - 19:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 28,
+    "nama_kolam": "Kolam Renang Merpati",
+    "jenis_tiket": "Reguler",
+    "harga": 15000,
+    "lokasi": {
+      "alamat": "Jl. Merpati Putih No.22",
+      "kota": "Medan"
+    },
+    "fasilitas": {
+      "kamar_mandi": false,
+      "penyewaan_ban": false,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Senin-Jumat",
+      "jam": "08:00 - 15:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 29,
+    "nama_kolam": "AquaZone",
+    "jenis_tiket": "VIP",
+    "harga": 65000,
+    "lokasi": {
+      "alamat": "Jl. Zona Air No.88",
+      "kota": "Bogor"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": true,
+      "kantin": true
+    },
+    "jadwal_buka": {
+      "hari": "Sabtu-Minggu",
+      "jam": "10:00 - 20:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  },
+  {
+    "id_tiket": 30,
+    "nama_kolam": "Greenlake Pool",
+    "jenis_tiket": "Reguler",
+    "harga": 20000,
+    "lokasi": {
+      "alamat": "Jl. Danau Hijau No.5",
+      "kota": "Makassar"
+    },
+    "fasilitas": {
+      "kamar_mandi": true,
+      "penyewaan_ban": false,
+      "kantin": false
+    },
+    "jadwal_buka": {
+      "hari": "Setiap Hari",
+      "jam": "06:00 - 18:00"
+    },
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PBE5nffDsFWn-InpBw2qmw5pCNabs1Mn2g&s"
+  }
+]

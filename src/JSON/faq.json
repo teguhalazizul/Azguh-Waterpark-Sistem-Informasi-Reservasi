@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "Bagaimana cara membeli tiket?",
+    "answer": "Anda bisa membeli tiket melalui website kami dengan memilih tiket yang diinginkan lalu melakukan pembayaran."
+  },
+  {
+    "id": 2,
+    "question": "Apakah tiket bisa dibatalkan?",
+    "answer": "Tiket yang sudah dibeli tidak dapat dibatalkan atau dikembalikan."
+  },
+  {
+    "id": 3,
+    "question": "Jam operasional kolam renang?",
+    "answer": "Jam operasional kolam renang adalah dari pukul 08.00 hingga 18.00 setiap hari."
+  }
+]

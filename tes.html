@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Web Accessibility dan Performance</title>
+</head>
+<body>
+
+    <h1>Belajar Web Accessibility dan Performance</h1>
+    <p>Web Accessibility adalah kemampuan sebuah website diakses oleh semua orang, termasuk orang-orang dengan disabilitas. 
+       Web Performance adalah kecepatan sebuah website dalam memberikan respon terhadap permintaan pengguna.</p>
+
+    <span aria-label="Link menuu " role="link">Ini Text Span</span>
+
+    <form>
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="custom-button inline border border-solid border-gray-200 p-4" tabindex="0">
+        Button Ke 2
+    </div>
+
+    <script>
+        const customButton = document.querySelector('.custom-button');
+        const keyboardSpaceCode = 32;
+
+        customButton.addEventListener('keydown', (event) => {
+            if (event.keyCode === keyboardSpaceCode) {
+                alert('Button Ke 2 di klik!');
+            }
+        });
+    </script>
+
+</body>
+</html>
