@@ -1,61 +1,53 @@
 import { useParams } from "react-router-dom";
-import ticketData from "../JSON/tickets.json";
+import articles from "../JSON/articles.json";
+import { MdOutlineEmojiPeople } from "react-icons/md";
 
-export default function TicketDetail() {
+export default function ArticleDetail() {
   const { id } = useParams();
-  const ticket = ticketData.find((t) => t.id_tiket.toString() === id);
+  const article = articles.find((a) => a.id.toString() === id);
 
-  if (!ticket) {
-    return <div className="p-8 text-center text-red-600">Tiket tidak ditemukan.</div>;
+  if (!article) {
+    return (
+      <div className="p-8 text-center text-red-600 text-xl font-semibold">
+        Artikel tidak ditemukan.
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Gambar Utama */}
       <img
-        src={ticket.gambar}
-        alt={ticket.nama_kolam}
-        className="w-full h-64 object-cover rounded-xl mb-6"
+        src={article.thumbnail}
+        alt={article.title}
+        className="w-full h-64 sm:h-80 object-cover rounded-xl shadow-md mb-8"
       />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">{ticket.nama_kolam}</h1>
+      {/* Judul Artikel */}
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        {article.title}
+      </h1>
 
-      <p className="text-blue-600 text-lg mb-2">
-        {ticket.jenis_tiket} • Rp {ticket.harga.toLocaleString()}
-      </p>
-
-      <p className="text-sm text-gray-500 mb-6">
-        {ticket.lokasi.alamat}, {ticket.lokasi.kota}
-      </p>
-
-      <div className="text-gray-800 leading-relaxed text-justify space-y-4">
-        <p>
-          Rencanakan kunjunganmu ke <strong>{ticket.nama_kolam}</strong> dan nikmati pengalaman seru bermain air
-          di lokasi yang nyaman dan strategis. Tempat ini cocok untuk keluarga, anak-anak, dan juga acara
-          komunitas.
-        </p>
-        <p>
-          Kolam ini menyediakan berbagai fasilitas seperti seluncuran air, kolam arus, serta area makan yang
-          bersih. Kamu bisa datang saat <strong>{ticket.jadwal_buka.hari}</strong> pukul <strong>{ticket.jadwal_buka.jam}</strong>.
-        </p>
-        <p>
-          Jangan lupa membawa pakaian ganti dan perlengkapan mandi. Gunakan sunblock untuk perlindungan dari
-          sinar matahari. Tiket tersedia dengan harga terjangkau dan pelayanan yang ramah.
-        </p>
-
-        <div>
-          <strong className="block mb-2">Fasilitas yang Tersedia:</strong>
-          <ul className="list-disc ml-6">
-            {Object.entries(ticket.fasilitas).map(([key, val]) => (
-              <li key={key}>
-                {key.replace("_", " ")}:{" "}
-                <span className={val ? "text-green-600" : "text-red-500"}>
-                  {val ? "✓ Tersedia" : "✗ Tidak Tersedia"}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* Penulis dan Tanggal */}
+      <div className="flex items-center text-sm text-gray-600 mb-8">
+        <MdOutlineEmojiPeople className="text-xl mr-2 text-gray-400" />
+        <span className="font-medium text-gray-700">{article.author}</span>
+        <span className="mx-2">•</span>
+        <span>
+          {new Date(article.published_at).toLocaleDateString("id-ID", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </span>
       </div>
+
+      {/* Konten Artikel */}
+      <article className="prose prose-lg max-w-none text-gray-800 leading-relaxed">
+        {article.content?.split("\n").map((paragraph, idx) => (
+          <p key={idx}>{paragraph}</p>
+        ))}
+      </article>
     </div>
   );
-}
+} 

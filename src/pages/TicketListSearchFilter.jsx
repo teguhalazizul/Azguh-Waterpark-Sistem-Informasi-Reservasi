@@ -80,47 +80,49 @@ export default function TicketListSearchFilter() {
 
       {/* Ticket Cards */}
       {/* Ticket Cards */}
-<div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-  {filteredTickets.map((item) => (
-    <Link to={`/tiket/${item.id_tiket}`} key={item.id_tiket}>
-      <div className="border rounded-2xl shadow-md bg-white hover:shadow-xl transition duration-300 overflow-hidden">
-        <img
-          src={item.gambar}
-          alt={item.nama_kolam}
-          className="w-full h-48 object-cover"
-        />
-        <div className="p-4">
-          <h2 className="text-xl font-semibold text-gray-800">
-            {item.nama_kolam}
-          </h2>
-          <p className="text-sm text-blue-500 font-medium mt-1">
-            {item.jenis_tiket} • Rp {item.harga.toLocaleString()}
-          </p>
-          <p className="text-sm text-gray-600 mt-1">
-            {item.lokasi.alamat}, {item.lokasi.kota}
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            <strong>Jam buka:</strong> {item.jadwal_buka.hari} ({item.jadwal_buka.jam})
-          </p>
-          <div className="mt-3 text-sm">
-            <strong>Fasilitas:</strong>
-            <ul className="list-disc ml-5 mt-1 space-y-1">
-              {Object.entries(item.fasilitas).map(([key, val]) => (
-                <li key={key}>
-                  {key.replace("_", " ")}:{" "}
-                  <span className={val ? "text-green-600" : "text-red-500"}>
-                    {val ? "✓" : "✗"}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {filteredTickets.map((item) => (
+          <Link to={`/tiket/${item.id_tiket}`} key={item.id_tiket}>
+            <div className="border rounded-2xl shadow-md bg-white hover:shadow-xl transition duration-300 overflow-hidden">
+              <img
+                src={item.gambar}
+                alt={item.nama_kolam}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  {item.nama_kolam}
+                </h2>
+                <p className="text-sm text-blue-500 font-medium mt-1">
+                  {item.jenis_tiket} • Rp {item.harga.toLocaleString()}
+                </p>
+                <p className="text-sm text-gray-600 mt-1">
+                  {item.lokasi.alamat}, {item.lokasi.kota}
+                </p>
+                <p className="text-sm text-gray-500 mt-2">
+                  <strong>Jam buka:</strong> {item.jadwal_buka.hari} (
+                  {item.jadwal_buka.jam})
+                </p>
+                <div className="mt-3 text-sm">
+                  <strong>Fasilitas:</strong>
+                  <ul className="list-disc ml-5 mt-1 space-y-1">
+                    {Object.entries(item.fasilitas).map(([key, val]) => (
+                      <li key={key}>
+                        {key.replace("_", " ")}:{" "}
+                        <span
+                          className={val ? "text-green-600" : "text-red-500"}
+                        >
+                          {val ? "✓" : "✗"}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
-    </Link>
-  ))}
-</div>
-
 
       {/* Empty State */}
       {filteredTickets.length === 0 && (

@@ -27,6 +27,12 @@ import TicketListSearchFilter from "./pages/TicketListSearchFilter";
 import TicketDetail from "./components/TicketDetail";
 import FAQPage from "./components/FAQPage";
 import ContactUs from "./components/ContactUs";
+import Comments from "./pages/Comments";
+import CommentList from "./pages/Comments";
+import Homepage from "./pages/Homepage";
+import FasilitasList from "./pages/FasilitasList";
+import JobDetail from "./components/JobDetail";
+import FasilitasDetail from "./components/FasilitasDetail";
 
 // Opsional: Loading component
 
@@ -36,19 +42,25 @@ function App() {
       <Routes>
         {/* Main layout routes */}
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Herosection />} />
-          <Route path="/fasilitas" element={<FeatureSection />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/fasilitas" element={<FasilitasList />} />
+          <Route path="/fasilitas/:id" element={<FasilitasDetail/>} />
+
           <Route path="/article" element={<ArticleList />} />
           <Route path="/article/:id" element={<ArticleDetail />} />
           <Route path="/job" element={<JobList />} />
+          <Route path="/jobs/:id" element={<JobDetail />} />
+
           <Route path="/review" element={<ReviewList />} />
           <Route path="/error400" element={<Error400 />} />
           <Route path="/error401" element={<Error401 />} />
           <Route path="/error403" element={<Error403 />} />
-          <Route path="/tiket" element={<TicketListSearchFilter/>} />
-          <Route path="/tiket/:id" element={<TicketDetail/>} />
-          <Route path="/faq" element={<FAQPage/>} />
-        <Route path="/contact" element={<ContactUs/>} />
+          <Route path="/tiket" element={<TicketListSearchFilter />} />
+          <Route path="/tiket/:id" element={<TicketDetail />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/comment" element={<CommentList />} />
+
           <Route path="*" element={<NotFound />} />
         </Route>
 

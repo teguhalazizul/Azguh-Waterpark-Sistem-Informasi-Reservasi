@@ -26,6 +26,9 @@ export default function Navbar() {
           <NavItem id="fasilitas" to="/fasilitas">
             Fasilitas
           </NavItem>
+          <NavItem id="Tiket" to="/tiket">
+            Tiket
+          </NavItem>
           <NavItem id="faq" to="/faq">
             FAQ
           </NavItem>
