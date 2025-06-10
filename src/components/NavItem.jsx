@@ -1,16 +1,19 @@
+// NavItem.jsx (untuk dropdown di navbar)
 import { NavLink } from "react-router-dom";
 
-export default function NavItem({ id, to, children }) {
-  const menuClass = ({ isActive }) =>
-    `flex cursor-pointer items-center rounded-xl p-4 space-x-2
-    ${isActive ? 
-      "text-putih bg-birumuda font-extrabold" : 
-      "text-putih hover:text-putih hover:bg-birumuda hover:font-extrabold"
-    }`;
-
+export default function NavItem({ to, children }) {
   return (
-    <NavLink id={id} to={to} className={menuClass}>
-      <span >{children}</span>
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        `block px-4 py-2 text-sm rounded-md transition ${
+          isActive
+            ? "bg-birumuda text-white font-semibold"
+            : "text-biru hover:bg-gray-100 hover:text-biru"
+        }`
+      }
+    >
+      {children}
     </NavLink>
   );
 }

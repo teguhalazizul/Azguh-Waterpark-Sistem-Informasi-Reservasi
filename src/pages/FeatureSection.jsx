@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 export default function FeatureSection() {
   return (
@@ -26,9 +27,11 @@ export default function FeatureSection() {
           <p className="text-teks-samping mt-4 text-lg">
             Dari kolam ombak, seluncuran ekstrim, hingga area bermain anak – semua ada untuk pengalaman bermain air yang tak terlupakan!
           </p>
-          <button className="mt-6 bg-birumuda hover:bg-kuning text-white hover:text-black px-6 py-3 rounded-lg  transition-all">
-            Jelajahi Fasilitas →
-          </button> 
+          <Link to="/fasilitas">
+  <button className="mt-6 bg-birumuda hover:bg-kuning text-white hover:text-black px-6 py-3 rounded-lg transition-all">
+    Jelajahi Fasilitas →
+  </button>
+</Link>
         </div>
       </div>
     </section>
