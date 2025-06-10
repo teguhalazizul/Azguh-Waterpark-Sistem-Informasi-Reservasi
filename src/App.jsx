@@ -33,6 +33,10 @@ import Homepage from "./pages/Homepage";
 import FasilitasList from "./pages/FasilitasList";
 import JobDetail from "./components/JobDetail";
 import FasilitasDetail from "./components/FasilitasDetail";
+import PricingPage from "./pages/PricingPage";
+import TeamPage from "./pages/TeamPage";
+import AboutPage from "./pages/AboutPage";
+import MediaPage from "./pages/MediaPage";
 
 // Opsional: Loading component
 
@@ -44,7 +48,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/fasilitas" element={<FasilitasList />} />
-          <Route path="/fasilitas/:id" element={<FasilitasDetail/>} />
+          <Route path="/fasilitas/:id" element={<FasilitasDetail />} />
 
           <Route path="/article" element={<ArticleList />} />
           <Route path="/article/:id" element={<ArticleDetail />} />
@@ -60,6 +64,11 @@ function App() {
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/comment" element={<CommentList />} />
+
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/media" element={<MediaPage />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
