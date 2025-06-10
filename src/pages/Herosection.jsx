@@ -14,7 +14,7 @@ export default function Herosection() {
           </p>
           <Link to="/tiket">
             <button className="mt-6 bg-birumuda hover:bg-kuning text-white hover:text-black px-6 py-3 rounded-lg transition-all">
-              Pesan Tiket →
+              Pesan Tikett →
             </button>
           </Link>
         </div>
