@@ -1,27 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ticketjson from "../JSON/tickets.json";
 
-const TicketCard = ({ ticket }) => (
-  <div className="bg-white rounded-xl shadow-md overflow-hidden max-w-md mx-auto mb-6">
-    <img src={ticket.image} alt={ticket.title} className="w-full h-auto" />
-    <div className="p-4">
-      <h2 className="text-xl font-bold text-gray-800 mb-2">{ticket.title}</h2>
-      <p className="text-sm text-gray-600 mb-1">{ticket.ticketInfo}</p>
-      <p className="text-sm text-gray-500 mb-1">
-        <span className="font-semibold">Validity</span>: {ticket.validity}
-      </p>
-      <p className="text-sm text-gray-500">
-        <span className="font-semibold">Price</span>: {ticket.price}
-      </p>
-    </div>
-  </div>
-);
-
-export default function TiketList() {
+export default function TicketListSearchFilter() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState("All");
+  const navigate = useNavigate();
 
-  const filteredTickets = ticketjson.filter(ticket => {
+  const filteredTickets = ticketjson.filter((ticket) => {
     const matchesSearch = ticket.title.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter =
       filter === "All" ||
@@ -41,12 +27,12 @@ export default function TiketList() {
           type="text"
           placeholder="Search ticket..."
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="px-4 py-2 rounded-lg border border-gray-300 w-full md:w-1/3"
         />
         <select
           value={filter}
-          onChange={e => setFilter(e.target.value)}
+          onChange={(e) => setFilter(e.target.value)}
           className="px-4 py-2 rounded-lg border border-gray-300 w-full md:w-1/4"
         >
           <option value="All">All</option>
@@ -57,7 +43,30 @@ export default function TiketList() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredTickets.length > 0 ? (
-          filteredTickets.map((ticket, index) => <TicketCard key={index} ticket={ticket} />)
+          filteredTickets.map((ticket, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md overflow-hidden max-w-md mx-auto mb-6"
+            >
+              <img src={ticket.image} alt={ticket.title} className="w-full h-auto" />
+              <div className="p-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-2">{ticket.title}</h2>
+                <p className="text-sm text-gray-600 mb-1">{ticket.ticketInfo}</p>
+                <p className="text-sm text-gray-500 mb-1">
+                  <span className="font-semibold">Validity</span>: {ticket.validity}
+                </p>
+                <p className="text-sm text-gray-500 mb-3">
+                  <span className="font-semibold">Price</span>: {ticket.price}
+                </p>
+                <button
+                  onClick={() => navigate("/order", { state: { ticket } })}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                >
+                  Pesan
+                </button>
+              </div>
+            </div>
+          ))
         ) : (
           <p className="text-center text-gray-500 col-span-full">No tickets found.</p>
         )}

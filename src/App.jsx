@@ -37,6 +37,8 @@ import PricingPage from "./pages/PricingPage";
 import TeamPage from "./pages/TeamPage";
 import AboutPage from "./pages/AboutPage";
 import MediaPage from "./pages/MediaPage";
+import TiketForm from "./pages/TiketForm";
+import TicketForm from "./pages/TiketForm";
 
 // Opsional: Loading component
 
@@ -69,6 +71,7 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/media" element={<MediaPage />} />
+        <Route path="/order" element={<TicketForm/>} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -18,3 +18,7 @@
 body {
     @apply font-inter;
 }
+/** Tambahkan Ini **/
+@plugin "daisyui" {
+    themes: light --default;
+}

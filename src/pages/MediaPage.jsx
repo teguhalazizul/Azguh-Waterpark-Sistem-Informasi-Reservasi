@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { mediaAPI } from "../api/mediaAPI";
+import { mediaAPI } from "../api/mediaAPI"; // Pastikan ini fetch dari tabel ManajemenGaleriMedia
 import Loading from "../components/Loading";
 import Error from "../components/Error";
 import EmptyState from "../components/EmptyState";
@@ -33,7 +33,7 @@ export default function MediaPage() {
         <h2 className="text-2xl font-semibold text-green-600 mb-4">📷 Foto</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {media
-            .filter((m) => m.jenis === "foto")
+            .filter((m) => m.tipe === "foto")
             .map((item) => (
               <div
                 key={item.id}
@@ -48,36 +48,45 @@ export default function MediaPage() {
                   <p className="text-gray-700 text-sm font-medium">
                     {item.judul}
                   </p>
+                  <p className="text-gray-500 text-xs">{item.deskripsi}</p>
                 </div>
               </div>
             ))}
         </div>
       </section>
 
-      {/* Video - kalau nanti aktif */}
-      <section>
-        <h2 className="text-2xl font-semibold text-blue-600 mb-4">🎥 Video</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {media
-            .filter((m) => m.jenis === "video")
-            .map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden"
-              >
-                <video controls className="w-full rounded-t">
-                  <source src={item.url} type="video/mp4" />
-                  Browser Anda tidak mendukung tag video.
-                </video>
-                <div className="p-3 text-center">
-                  <p className="text-gray-700 text-sm font-medium">
-                    {item.judul}
-                  </p>
-                </div>
-              </div>
-            ))}
+      {/* Video */}
+      {/* Video */}
+<section>
+  <h2 className="text-2xl font-semibold text-blue-600 mb-4">🎥 Video</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {media
+      .filter((m) => m.tipe === "video")
+      .map((item) => (
+        <div
+          key={item.id}
+          className="bg-white rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden"
+        >
+          {/* Ganti di sini */}
+          <div className="aspect-video w-full bg-black">
+            <video
+              controls
+              preload="metadata"
+              className="w-full h-full object-contain"
+            >
+              <source src={item.url} type="video/mp4" />
+              Browser Anda tidak mendukung tag video.
+            </video>
+          </div>
+          <div className="p-3 text-center">
+            <p className="text-gray-700 text-sm font-medium">{item.judul}</p>
+            <p className="text-gray-500 text-xs">{item.deskripsi}</p>
+          </div>
         </div>
-      </section>
+      ))}
+  </div>
+</section>
+
     </div>
   );
 }
