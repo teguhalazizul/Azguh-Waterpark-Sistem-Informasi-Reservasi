@@ -10,11 +10,18 @@ export default function Footer() {
         <h2 className="text-4xl font-bold mb-4">Ayo Main ke Azguh Waterpark</h2>
         <p className="text-lg mb-4">Pesan tiket online dan nikmati liburan yang seru dan menyegarkan!</p>
         <Link to="/tiket">
-          <button className="bg-birumuda hover:bg-kuning text-white font-semibold px-6 py-2 rounded-lg mb-4 transition">
-            Pesan Sekarang →
-          </button>
+          <button className="mt-6 px-6 py-3 rounded-lg transition-all relative overflow-hidden font-medium group bg-birumuda border border-birumuda text-white shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-birumuda focus:ring-opacity-50">
+              <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-white group-hover:w-full ease"></span>
+              <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-white group-hover:w-full ease"></span>
+              <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-white group-hover:h-full ease"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-white group-hover:h-full ease"></span>
+              <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-birumuda opacity-0 group-hover:opacity-100"></span>
+              <span className="relative transition-colors duration-300 delay-200 group-hover:text-gray-900 ease">
+                Pesan Sekarang →
+              </span>
+            </button>
         </Link>
-        <p className="text-sm mb-4">
+        <p className="text-sm mb-4 mt-6 px-6">
           Butuh bantuan? Lihat FAQ kami atau hubungi customer service
         </p>
         <div className="flex justify-center gap-6 text-2xl text-white">

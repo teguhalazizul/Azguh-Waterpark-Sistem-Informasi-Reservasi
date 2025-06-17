@@ -71,7 +71,7 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/media" element={<MediaPage />} />
-        <Route path="/order" element={<TicketForm/>} />
+          <Route path="/order" element={<TicketForm />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>
