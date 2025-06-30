@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { teamAPI } from "../api/teamAPI";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
@@ -21,13 +22,35 @@ export default function TeamPage() {
   if (err) return <Error message={err.message} />;
   if (data.length === 0) return <EmptyState message="Tim belum tersedia." />;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+    <motion.div
+      className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-25"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <div className="max-w-6xl mx-auto px-6">
         {/* Header Section */}
-        <div className="text-center mb-16 animate-fade-in">
+        <motion.div className="text-center mb-16" variants={itemVariants}>
           <h1 className="text-5xl font-extrabold text-gray-800 mb-4">
-            Meet Our 
+            Meet Our{" "}
             <span className="relative inline-block ml-2">
               Team
               <span className="absolute -bottom-2 left-0 w-full h-3 bg-kuning opacity-60 -z-10 rounded"></span>
@@ -37,17 +60,18 @@ export default function TeamPage() {
             Tim profesional yang berdedikasi memberikan pengalaman terbaik untuk Anda
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-biru to-birumuda mx-auto mt-6 rounded-full"></div>
-        </div>
+        </motion.div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+        >
           {data.map((person, index) => (
-            <div
+            <motion.div
               key={person.id}
-              className="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 p-8 text-center transform hover:-translate-y-2 animate-fade-in-up border border-gray-100"
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
+              className="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 p-8 text-center transform hover:-translate-y-2 border border-gray-100"
+              variants={itemVariants}
             >
               {/* Profile Image */}
               <div className="relative mb-6">
@@ -75,22 +99,28 @@ export default function TeamPage() {
               {/* Decorative Element */}
               <div className="mt-6 flex justify-center space-x-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="w-2 h-2 bg-biru rounded-full animate-pulse"></div>
-                <div className="w-2 h-2 bg-birumuda rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                <div className="w-2 h-2 bg-kuning rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                <div
+                  className="w-2 h-2 bg-birumuda rounded-full animate-pulse"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+                <div
+                  className="w-2 h-2 bg-kuning rounded-full animate-pulse"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Bottom Decoration */}
-        <div className="text-center mt-16 animate-fade-in">
+        <motion.div className="text-center mt-16" variants={itemVariants}>
           <div className="inline-flex items-center space-x-2 text-gray-500">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-gray-300"></div>
             <span className="text-sm font-medium">Tim Azguh Waterpark</span>
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-gray-300"></div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

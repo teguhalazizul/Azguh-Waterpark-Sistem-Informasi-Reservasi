@@ -4,10 +4,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion"; // Added for fade-in animation
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  "https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "https://wahoowaterworld.co.id/cms/lib/images/item/super-bowl-450x675.jpg",
+  "https://wahoowaterworld.co.id/cms/lib/images/item/wave-pool-450x675-1.jpg",
+  "https://wahoowaterworld.co.id/cms/lib/images/item/splash-zone-450x675.jpg",
+  "https://wahoowaterworld.co.id/cms/lib/images/item/rainfortress-450x675-1.jpg",
 ];
 export default function Herosection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -3,48 +3,50 @@
     "id": 1,
     "nama": "Kolam Anak",
     "deskripsi": "Kolam dangkal dengan berbagai wahana permainan air yang aman dan menyenangkan untuk anak-anak.",
-    "gambar": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/item/gallery/warm-pool-gallery.jpg"
   },
   {
     "id": 2,
     "nama": "Seluncuran Air",
     "deskripsi": "Seluncuran tinggi yang memacu adrenalin, cocok untuk pengunjung yang menyukai tantangan.",
-    "gambar": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/item/gallery/2caterpillar.jpg"
   },
   {
     "id": 3,
     "nama": "Gazebo",
     "deskripsi": "Tempat beristirahat nyaman bersama keluarga sambil menikmati suasana waterpark.",
-    "gambar": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/service/gazebo-wisata-hits.jpg",
+    "harga": 50000
   },
   {
     "id": 4,
     "nama": "Kantin",
     "deskripsi": "Tempat makan dengan berbagai pilihan menu lezat dan minuman segar.",
-    "gambar": "https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/media-content/jajanan-di-wisata-healing-bandung.jpg"
   },
   {
     "id": 5,
     "nama": "Loker",
     "deskripsi": "Loker aman untuk menyimpan barang-barang pribadi selama bermain air.",
-    "gambar": "https://www.bing.com/th/id/OIP.bNqqpg0Vit3uCQKFbWnFdAHaEJ?w=295&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+    "gambar": "https://www.bing.com/th/id/OIP.bNqqpg0Vit3uCQKFbWnFdAHaEJ?w=295&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
+    "harga": 15000
   },
   {
     "id": 6,
     "nama": "Toilet & Shower",
     "deskripsi": "Fasilitas toilet dan kamar mandi yang bersih dan mudah diakses.",
-    "gambar": "https://th.bing.com/th/id/OIP.i0b_DNzmnk_fZAWUWtfN-QHaE8?w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/service/refund-wisata-healing-bandung.jpg"
   },
   {
     "id": 7,
     "nama": "Souvenir",
     "deskripsi": "Toko oleh-oleh untuk membawa pulang kenang-kenangan dari Azguh Waterpark.",
-    "gambar": "https://th.bing.com/th/id/OIP.BIK8KN7zfn2TlKiN5_CGcQHaHa?w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/service/cenderamata-wisata-di-bandung.jpg"
   },
   {
     "id": 8,
     "nama": "Parkir Luas",
     "deskripsi": "Area parkir luas dan aman untuk kendaraan roda dua maupun empat.",
-    "gambar": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=800&q=80"
+    "gambar": "https://wahoowaterworld.co.id/cms/lib/images/venue/abyss-garden-wisata-outdoor-bandung.jpg"
   }
 ]

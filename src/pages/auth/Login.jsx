@@ -1,5 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,14 +20,20 @@ export default function Login() {
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-semibold text-blue-700 mb-6 text-center">
-        Welcome Back 👋
-      </h2>
+    <div className="max-w-md mx-auto bg-white p-8 rounded-2xl  border-blue-100">
+      <div className="text-center mb-8">
+        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span className="text-2xl">👋</span>
+        </div>
+        <h2 className="text-3xl font-bold text-blue-700 mb-2">
+          Welcome Back
+        </h2>
+        <p className="text-blue-500 text-sm">Sign in to your account</p>
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        <div className="mb-5">
-          <label className="block text-sm font-medium text-blue-700 mb-1">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block text-sm font-semibold text-blue-700 mb-2">
             Email Address
           </label>
           <input
@@ -33,13 +41,15 @@ export default function Login() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 bg-blue-50 border border-blue-300 rounded-lg shadow-sm
-              placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500"
+            className="w-full px-4 py-3 bg-blue-50/50 border-2 border-blue-200 rounded-xl shadow-sm
+              placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500
+              transition-all duration-200 hover:border-blue-300"
             placeholder="you@example.com"
           />
         </div>
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-blue-700 mb-1">
+        
+        <div>
+          <label className="block text-sm font-semibold text-blue-700 mb-2">
             Password
           </label>
           <input
@@ -47,33 +57,53 @@ export default function Login() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 bg-blue-50 border border-blue-300 rounded-lg shadow-sm
-              placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500"
+            className="w-full px-4 py-3 bg-blue-50/50 border-2 border-blue-200 rounded-xl shadow-sm
+              placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500
+              transition-all duration-200 hover:border-blue-300"
             placeholder="********"
           />
         </div>
-        <button
+        
+        <motion.button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4
-            rounded-lg transition duration-300"
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 
+            text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl
+            transition-all duration-300 transform"
         >
-          Login
-        </button>
+          Sign In
+        </motion.button>
       </form>
 
-      <div className="mt-4 text-center">
-        <Link to="/forgot" className="text-sm text-blue-500 hover:text-blue-700">
-          <button>Forgot Password?</button>
-        </Link>
-      </div>
-
-      <div className="mt-2 text-center">
-        <p className="text-sm text-gray-600">
-          Don't have an account?{" "}
-          <Link to="/register">
-            <button className="text-blue-500 hover:text-blue-700">Sign Up</button>
+      <div className="mt-8 space-y-4">
+        <div className="text-center">
+          <Link to="/forgot" className="text-sm text-blue-500 hover:text-blue-700 transition-colors">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hover:underline"
+            >
+              Forgot Password?
+            </motion.button>
           </Link>
-        </p>
+        </div>
+
+        <div className="text-center pt-4 border-t border-blue-100">
+          <p className="text-sm text-gray-600 mb-2">
+            Don't have an account yet?
+          </p>
+          <Link to="/register">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-blue-500 hover:text-blue-700 font-semibold transition-colors"
+            >
+              Create Account
+            </motion.button>
+          </Link>
+        </div>
       </div>
     </div>
   );

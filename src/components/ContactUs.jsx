@@ -1,5 +1,6 @@
 import contactData from "../JSON/contact.json";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ContactUs() {
   const [form, setForm] = useState({
@@ -19,29 +20,61 @@ export default function ContactUs() {
     setForm({ name: "", email: "", message: "" });
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <div className="max-w-4xl mx-auto p-10 bg-white rounded-2xl shadow-xl">
-      <h1 className="text-4xl font-extrabold mb-10 text-center text-blue-700">
+    <motion.div
+      className="max-w-4xl mx-auto p-10 bg-white rounded-2xl shadow-xl"
+      initial="hidden"
+      animate="visible"
+      variants={fadeUp}
+    >
+      <motion.h1
+        className="text-4xl font-extrabold mb-10 text-center text-blue-700"
+        variants={fadeUp}
+        custom={1}
+      >
         Contact Us
-      </h1>
+      </motion.h1>
 
-      <div className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        <div className="p-5 bg-blue-50 rounded-lg shadow-inner">
-          <h3 className="font-semibold text-blue-700 mb-2">Phone</h3>
-          <p className="text-gray-800">{contactData.phone}</p>
-        </div>
-        <div className="p-5 bg-blue-50 rounded-lg shadow-inner">
-          <h3 className="font-semibold text-blue-700 mb-2">Email</h3>
-          <p className="text-gray-800">{contactData.email}</p>
-        </div>
-        <div className="p-5 bg-blue-50 rounded-lg shadow-inner">
-          <h3 className="font-semibold text-blue-700 mb-2">Address</h3>
-          <p className="text-gray-800">{contactData.address}</p>
-        </div>
-      </div>
+      <motion.div
+        className="mb-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        initial="hidden"
+        animate="visible"
+      >
+        {[contactData.phone, contactData.email, contactData.address].map((item, index) => (
+          <motion.div
+            key={index}
+            className="p-5 bg-blue-50 rounded-lg shadow-inner"
+            variants={fadeUp}
+            custom={index + 2}
+          >
+            <h3 className="font-semibold text-blue-700 mb-2">
+              {["Phone", "Email", "Address"][index]}
+            </h3>
+            <p className="text-gray-800">{item}</p>
+          </motion.div>
+        ))}
+      </motion.div>
 
-      <form onSubmit={handleSubmit} className="space-y-8">
-        <div>
+      <motion.form
+        onSubmit={handleSubmit}
+        className="space-y-8"
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={fadeUp} custom={5}>
           <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
             Nama
           </label>
@@ -55,9 +88,9 @@ export default function ContactUs() {
             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
             placeholder="Masukkan nama Anda"
           />
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={fadeUp} custom={6}>
           <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
             Email
           </label>
@@ -71,13 +104,10 @@ export default function ContactUs() {
             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-400 transition"
             placeholder="Masukkan email Anda"
           />
-        </div>
+        </motion.div>
 
-        <div>
-          <label
-            htmlFor="message"
-            className="block text-gray-700 font-semibold mb-2"
-          >
+        <motion.div variants={fadeUp} custom={7}>
+          <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
             Pesan
           </label>
           <textarea
@@ -90,15 +120,17 @@ export default function ContactUs() {
             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-400 transition resize-none"
             placeholder="Tulis pesan Anda di sini"
           />
-        </div>
+        </motion.div>
 
-        <button
+        <motion.button
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition duration-300"
+          variants={fadeUp}
+          custom={8}
         >
           Kirim Pesan
-        </button>
-      </form>
-    </div>
+        </motion.button>
+      </motion.form>
+    </motion.div>
   );
 }

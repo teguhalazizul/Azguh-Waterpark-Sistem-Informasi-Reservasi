@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 export default function AuthLayout() {
     return (
         <div className="min-h-screen flex items-center justify-center bg-[--color-latar]">
-            <div className="bg-white p-8 rounded-2xl shadow-md w-full max-w-md">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-blue-100 w-full max-w-md">
                 <div className="flex items-center justify-center mb-6">
                     <h1 className="text-4xl font-poppins font-extrabold text-[--color-teks]">
                         <span className="text-[--color-biru]">Azguh</span>

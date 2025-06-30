@@ -1,18 +1,17 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
-export default function DropdownMenu({ label, items }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function DropdownMenu({ label, items, isOpen, onToggle }) {
   return (
     <div className="relative">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         className="flex items-center gap-1 px-4 py-2 font-medium hover:text-kuning transition"
       >
         {label}
-        <FaChevronDown className={`transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        <FaChevronDown
+          className={`transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
 
       <div
@@ -24,7 +23,7 @@ export default function DropdownMenu({ label, items }) {
           <Link
             key={index}
             to={to}
-            onClick={() => setIsOpen(false)}
+            onClick={onToggle} // Close menu when item clicked
             className="block px-4 py-2 hover:bg-birumuda hover:text-white transition"
           >
             {label}

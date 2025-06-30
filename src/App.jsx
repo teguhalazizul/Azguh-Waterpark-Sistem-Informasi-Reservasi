@@ -1,66 +1,66 @@
 import React, { Suspense } from "react";
-import "./assets/tailwind.css";
 import { Route, Routes } from "react-router-dom";
+import "./assets/tailwind.css";
+import Loading from "./components/Loading";
 
-// Lazy-loaded pages
+// Lazy layouts
+const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
+const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
+
+// Lazy auth pages
+const Login = React.lazy(() => import("./pages/auth/Login"));
+const Register = React.lazy(() => import("./pages/auth/Register"));
+const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
+
+// Lazy main pages
+const Homepage = React.lazy(() => import("./pages/Homepage"));
 const Herosection = React.lazy(() => import("./pages/Herosection"));
 const FeatureSection = React.lazy(() => import("./pages/FeatureSection"));
-const ArticleList = React.lazy(() => import("./pages/ArticelList")); // cek typo 'Articel' kalau mau benerin
+const ArticleList = React.lazy(() => import("./pages/ArticelList")); // typo di file masih "Articel"
 const JobList = React.lazy(() => import("./pages/JobList"));
 const ReviewList = React.lazy(() => import("./pages/ReviewList"));
+const TicketListSearchFilter = React.lazy(() => import("./pages/TicketListSearchFilter"));
+const FasilitasList = React.lazy(() => import("./pages/FasilitasList"));
+const PricingPage = React.lazy(() => import("./pages/PricingPage"));
+const TeamPage = React.lazy(() => import("./pages/TeamPage"));
+const AboutPage = React.lazy(() => import("./pages/AboutPage"));
+const MediaPage = React.lazy(() => import("./pages/MediaPage"));
+const CommentList = React.lazy(() => import("./pages/Comments"));
+const TicketForm = React.lazy(() => import("./pages/TiketForm"));
+const FormPembayaranFasilitas = React.lazy(() => import("./pages/FormPembayaranFasilitas"));
+
+// Lazy components as pages
+const ArticleDetail = React.lazy(() => import("./components/ArticleDetail"));
+const TicketDetail = React.lazy(() => import("./components/TicketDetail"));
+const FAQPage = React.lazy(() => import("./components/FAQPage"));
+const ContactUs = React.lazy(() => import("./components/ContactUs"));
+const JobDetail = React.lazy(() => import("./components/JobDetail"));
+const FasilitasDetail = React.lazy(() => import("./components/FasilitasDetail"));
+
+// Error pages
 const NotFound = React.lazy(() => import("./pages/NotFound"));
 const Error400 = React.lazy(() => import("./pages/Error400"));
 const Error401 = React.lazy(() => import("./pages/Error401"));
 const Error403 = React.lazy(() => import("./pages/Error403"));
 
-// Lazy-loaded layouts
-const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
-const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
-
-// Lazy-loaded auth pages
-const Login = React.lazy(() => import("./pages/auth/Login"));
-const Register = React.lazy(() => import("./pages/auth/Register"));
-const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
-import Loading from "./components/Loading"; // pastikan path-nya benar
-import ArticleDetail from "./components/ArticleDetail";
-import TicketListSearchFilter from "./pages/TicketListSearchFilter";
-import TicketDetail from "./components/TicketDetail";
-import FAQPage from "./components/FAQPage";
-import ContactUs from "./components/ContactUs";
-import Comments from "./pages/Comments";
-import CommentList from "./pages/Comments";
-import Homepage from "./pages/Homepage";
-import FasilitasList from "./pages/FasilitasList";
-import JobDetail from "./components/JobDetail";
-import FasilitasDetail from "./components/FasilitasDetail";
-import PricingPage from "./pages/PricingPage";
-import TeamPage from "./pages/TeamPage";
-import AboutPage from "./pages/AboutPage";
-import MediaPage from "./pages/MediaPage";
-import TiketForm from "./pages/TiketForm";
-import TicketForm from "./pages/TiketForm";
-
-// Opsional: Loading component
-
 function App() {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
-        {/* Main layout routes */}
+        {/* Main Layout Routes */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/fasilitas" element={<FasilitasList />} />
           <Route path="/fasilitas/:id" element={<FasilitasDetail />} />
+          <Route path="/pembayaran-fasilitas/:id" element={<FormPembayaranFasilitas />} />
 
           <Route path="/article" element={<ArticleList />} />
           <Route path="/article/:id" element={<ArticleDetail />} />
+
           <Route path="/job" element={<JobList />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
 
           <Route path="/review" element={<ReviewList />} />
-          <Route path="/error400" element={<Error400 />} />
-          <Route path="/error401" element={<Error401 />} />
-          <Route path="/error403" element={<Error403 />} />
           <Route path="/tiket" element={<TicketListSearchFilter />} />
           <Route path="/tiket/:id" element={<TicketDetail />} />
           <Route path="/faq" element={<FAQPage />} />

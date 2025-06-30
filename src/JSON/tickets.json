@@ -1,5 +1,6 @@
 [
   {
+    "id_tiket": 1,
     "title": "Solo Rider Weekday",
     "image": "/img/v530_10337.png",
     "ticketInfo": "1 Ticket termasuk 1 Es Krim",
@@ -7,6 +8,7 @@
     "price": "Rp95.000"
   },
   {
+    "id_tiket": 2,
     "title": "Solo Rider Weekend",
     "image": "/img/v530_10347.png",
     "ticketInfo": "1 Ticket termasuk Ice Cream",
@@ -14,6 +16,7 @@
     "price": "Rp135.000"
   },
   {
+    "id_tiket": 3,
     "title": "Triple Squad Weekday",
     "image": "/img/v530_10357.png",
     "ticketInfo": "3 Ticket",
@@ -21,6 +24,7 @@
     "price": "Rp270.000"
   },
   {
+    "id_tiket": 4,
     "title": "Triple Squad Weekend",
     "image": "/img/v530_10367.png",
     "ticketInfo": "3 Ticket",
@@ -28,6 +32,7 @@
     "price": "Rp375.000"
   },
   {
+    "id_tiket": 5,
     "title": "Fab Four Weekday",
     "image": "/img/v530_10377.png",
     "ticketInfo": "4 Ticket include Euro Bungy or Feeding Rabbit or Dragon Boat",
@@ -35,6 +40,7 @@
     "price": "Rp440.000"
   },
   {
+    "id_tiket": 6,
     "title": "Fab Four Weekend",
     "image": "/img/v530_10387.png",
     "ticketInfo": "4 Ticket include Euro Bungy or Dragon Boat or Petting zoo",
@@ -42,6 +48,7 @@
     "price": "Rp560.000"
   },
   {
+    "id_tiket": 7,
     "title": "Super Six Weekday",
     "image": "/img/v530_10407.png",
     "ticketInfo": "6 Ticket include Paint Ball",
